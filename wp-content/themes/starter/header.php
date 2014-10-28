@@ -10,12 +10,7 @@
 	<?php wp_head(); ?>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.css">
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/foundation.css">
-  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/style.css">
-
-  <!-- SCRIPT -->
-  <script src="<?php bloginfo('template_url'); ?>/js/jquery-1.10.1.min.js"></script>
+  <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/src/style.min.css">
 
   <!-- HTML5 for IE -->
   <!--[if lt IE 9]>
@@ -27,5 +22,10 @@
 
 <body <?php body_class();?> >
 
-	<header>
-	</header>
+	<div class="site-container">
+
+		<header class="row">
+			<div class="columns large-12">
+				<p>header</p>
+			</div>
+		</header>
