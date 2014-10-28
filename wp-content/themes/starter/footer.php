@@ -1,11 +1,52 @@
-	<footer class="row">
-		<div class="columns large-12">
-			<p>footer</p>
-		</div>
-	</footer>
 
+		<!-- FOOTER -->
+		<footer>
+			<div class="row">
 
+				<div class="columns large-3">
 
+					<span class="footer-title">Partagez</span>
+
+					<!-- SHARE -->
+					<ul class="social">
+
+						<!-- Facebook -->
+						<li class="facebook">
+							<a href="#">
+								<img src="<?php bloginfo('template_url'); ?>/img/social/icon-facebook.svg" alt="Facebook" />
+							</a>
+							<div class="background"></div>
+						</li>
+
+						<!-- Twitter -->
+						<li class="twitter">
+							<a href="#">
+								<img src="<?php bloginfo('template_url'); ?>/img/social/icon-twitter.svg" alt="Facebook" />
+							</a>
+							<div class="background"></div>
+						</li>
+
+					</ul>
+
+				</div>
+
+				<div class="columns large-3">
+					<p><strong>Footer 2</strong></p>
+					<p>Widget area 2</p>
+				</div>
+
+				<div class="columns large-3">
+					<p><strong>Footer 3</strong></p>
+					<p>Widget area 3</p>
+				</div>
+
+				<div class="columns large-3">
+					<p><strong>Footer 4</strong></p>
+					<p>Widget area 4</p>
+				</div>
+
+			</div>
+		</footer>
 
 	</div>
 	<!-- / .site-container -->
@@ -18,15 +59,10 @@
 			<img src="http://f.cl.ly/items/1U2c3b1215383h3a2T2r/icon-menu.svg"/>
 		</div>
 
+		<!-- Navigation mobile -->
 		<div class="nav-mobile-inner">
-			Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
-
-Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum. Donec ullamcorper nulla non metus auctor fringilla.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Maecenas faucibus mollis interdum. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna.
-
-Cras mattis consectetur purus sit amet fermentum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec sed odio dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sed odio dui.
 		</div>
+
 	</div>
 
 	<!-- WORDPRESS FOOTER -->

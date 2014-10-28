@@ -19,13 +19,20 @@
 
 </head>
 
-
 <body <?php body_class();?> >
 
 	<div class="site-container">
 
 		<header class="row">
-			<div class="columns large-12">
-				<p>header</p>
+
+			<!-- LOGO -->
+			<div class="columns large-3">
+				<p>Logo</p>
 			</div>
+
+			<!-- MENU -->
+			<div class="columns large-9">
+				<p>Menu</p>
+			</div>
+
 		</header>

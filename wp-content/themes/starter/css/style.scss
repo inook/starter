@@ -11,18 +11,26 @@
   0. Variables
   1. Structure
   2. Navigation mobile
-  3. Footer
+  3. Navigation
+  4. Breadcrumb
+  15. Footer
 
 */
 
 
 /* --------------------------- */
-/* 1. Variable                 */
+/* 0. Variable                 */
 /* --------------------------- */
+
+
+    // Couleur
+    $theme-primary-color : #7CCC6D;
 
    // Navigation Mobile
    $nav-mobile-size : 300px;
    $nav-mobile-bg : #3D3D3D;
+
+
 
 
 /* --------------------------- */
@@ -81,10 +89,69 @@ body.opened {
   }
 }
 
+/* --------------------------- */
+/* 4. Breadcrumb               */
+/* --------------------------- */
+
+#breadcrumbs {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+}
+  #breadcrumbs li{
+    @include font-size(11px);
+    display: inline-block;
+    padding:0 5px 0 0;
+  }
+
+  #breadcrumbs li a {
+    color: $theme-primary-color;
+  }
 
 /* --------------------------- */
-/* 3. Footer                   */
+/* 15. Footer                  */
 /* --------------------------- */
 
 footer {
+
 }
+
+  footer ul.social  {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+  }
+
+  footer ul.social li {
+    display:inline-block;
+    position:relative;
+    z-index:2;
+  }
+
+  footer ul.social li:hover .document{
+    background-color: #CCC;
+  }
+
+
+  footer ul.social li a{
+    position:relative;
+    z-index:2;
+  }
+
+  footer .background {
+    position:absolute;
+    top:0px;
+    left:0px;
+    border-radius:100%;
+    width:35px;
+    height:35px;
+    z-index:1;
+  }
+
+  footer .facebook .background {
+    background-color: #4363a1;
+  }
+
+  footer .twitter .background {
+    background-color: #2ea3de;
+  }

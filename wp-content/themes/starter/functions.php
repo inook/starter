@@ -6,6 +6,14 @@
 
 add_theme_support( 'post-thumbnails' );
 
+/*
+add_image_size( 'thumbnail-index-large', 600, 287, true );
+add_image_size( 'thumbnail-index-square', 600, 600, true );
+add_image_size( 'thumbnail-evenements', 500, 710, true );
+add_image_size( 'thumbnail-gallery', 800, 450, true );
+add_image_size( 'thumbnail-fullscreen', 1200 );
+*/
+
 // remove junk from head
 // -------------------------------------------------
 
@@ -19,24 +27,11 @@ remove_action('wp_head', 'start_post_rel_link', 10, 0);
 remove_action('wp_head', 'parent_post_rel_link', 10, 0);
 remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
-// Remove jquery from header
-// -------------------------------------------------
-
-if( !is_admin()){
-wp_deregister_script('jquery');
-wp_register_script('jquery', (""), false, '');
-wp_enqueue_script('jquery');
-}
-
-// Remove admin bar
-// -------------------------------------------------
-
-add_filter('show_admin_bar', '__return_false');
 
 // Options
 // -------------------------------------------------
 
- if(is_admin()){
+ if( is_admin() ){
  	include 'inc/options_page.php';
  }
 
@@ -57,29 +52,56 @@ global $menu;
 	}
 }
 
-
-// WPML multilangue
+// Menu(s)
 // -------------------------------------------------
 
-define('ICL_DONT_LOAD_LANGUAGE_SELECTOR_CSS', true);
-define('ICL_DONT_LOAD_NAVIGATION_CSS', true);
-define('ICL_DONT_LOAD_LANGUAGES_JS', true);
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'menu_principal' => __( 'Menu principal' ),
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
 
-function wpml_languages(){
-	$languages = icl_get_languages('skip_missing=1&orderby=code&order=desc');
-  	if(1 < count($languages)){
-    	foreach($languages as $l){
-			if (!$l['active']) {
-    			$langs[] = '<a href="'.$l['url'].'">'.$l['language_code'].'</a>';
-			} else {
-    			$langs[] = '<a href="'.$l['url'].'" class="menu_langue_active">'.$l['language_code'].'</a>';
-			}
-		}
-		echo '<span id="language">';
-		echo join(' - ', $langs);
-		echo '</span>';
-		echo '<span class="menu_top_divider"></span>';
-  }
+// Breadcrumb
+// -------------------------------------------------
+
+function the_breadcrumb() {
+    global $post;
+    echo '<ul id="breadcrumbs">';
+
+        // Lien page d'accueil
+        echo '<li><a href="';
+        echo get_option('home');
+        echo '">';
+        echo 'Home';
+        echo '</a></li><li class="separator"> / </li>';
+
+        // Categorie ou page article
+        if (is_category() || is_single()) {
+            echo '<li>';
+            the_category(' </li><li class="separator"> / </li><li> ');
+            if (is_single()) {
+                echo '</li><li class="separator"> / </li><li>';
+                the_title();
+                echo '</li>';
+            }
+        }
+        // Page et sous page
+        elseif (is_page()) {
+            if($post->post_parent){
+                $anc = get_post_ancestors( $post->ID );
+                $title = get_the_title();
+                foreach ( $anc as $ancestor ) {
+                    $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
+                }
+                echo $output;
+                echo '<li><strong title="'.$title.'"> '.$title.'</strong></li>';
+            } else {
+                echo '<li><strong> '.get_the_title().'</strong></li>';
+            }
+        }
 }
 
 ?>
