@@ -3,46 +3,28 @@
 		<footer>
 			<div class="row">
 
-				<div class="columns large-3">
+				<div class="columns large-3 footer-single">
 
-					<span class="footer-title">Partagez</span>
-
-					<!-- SHARE -->
-					<ul class="social">
-
-						<!-- Facebook -->
-						<li class="facebook">
-							<a href="#">
-								<img src="<?php bloginfo('template_url'); ?>/img/social/icon-facebook.svg" alt="Facebook" />
-							</a>
-							<div class="background"></div>
-						</li>
-
-						<!-- Twitter -->
-						<li class="twitter">
-							<a href="#">
-								<img src="<?php bloginfo('template_url'); ?>/img/social/icon-twitter.svg" alt="Facebook" />
-							</a>
-							<div class="background"></div>
-						</li>
-
-					</ul>
+					<?php dynamic_sidebar( 'footer-1' ); ?>
 
 				</div>
 
-				<div class="columns large-3">
-					<p><strong>Footer 2</strong></p>
-					<p>Widget area 2</p>
+				<div class="columns large-3 footer-single">
+
+					<?php dynamic_sidebar( 'footer-2' ); ?>
+
 				</div>
 
-				<div class="columns large-3">
-					<p><strong>Footer 3</strong></p>
-					<p>Widget area 3</p>
+				<div class="columns large-3 footer-single">
+
+					<?php dynamic_sidebar( 'footer-3' ); ?>
+
 				</div>
 
-				<div class="columns large-3">
-					<p><strong>Footer 4</strong></p>
-					<p>Widget area 4</p>
+				<div class="columns large-3 footer-single">
+
+					<?php dynamic_sidebar( 'footer-4' ); ?>
+
 				</div>
 
 			</div>

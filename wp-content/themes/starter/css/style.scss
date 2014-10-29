@@ -23,8 +23,15 @@
 /* --------------------------- */
 
 
-    // Couleur
-    $theme-primary-color : #7CCC6D;
+   // Font
+   $paragraph-font-size : calculateRem(13px);
+   $paragraph-line-height : 1.5;
+
+   // Couleur
+   $theme-primary-color : #7CCC6D;
+
+   // Style
+   $border-radius: 3px;
 
    // Navigation Mobile
    $nav-mobile-size : 300px;
@@ -113,9 +120,79 @@ body.opened {
 /* --------------------------- */
 
 footer {
-
+  border-top:1px solid #eaeaea;
+  padding:10px 0 30px 0;
 }
 
+  .footer-single {
+    margin-top:20px;
+    font-size: $paragraph-font-size ;
+    line-height: $paragraph-line-height ;
+  }
+
+  // Texte footer
+
+  footer h1 {
+    font-size: $paragraph-font-size;
+    margin:0 0 5px 0;
+  }
+
+  footer p {
+    font-size: $paragraph-font-size ;
+    line-height: $paragraph-line-height ;
+    margin:0 0 5px 0;
+  }
+
+  footer a {
+    font-size: $paragraph-font-size ;
+    line-height: $paragraph-line-height ;
+    color: $theme-primary-color;
+  }
+
+  footer a:hover {
+    text-decoration:none;
+    color: darken($theme-primary-color, 15%);
+  }
+
+  // Menu footer
+
+  .footer-single ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+
+  // Champ recherche
+
+  footer .searchform label {
+    font-size: $paragraph-font-size;
+    margin:0 0 5px 0;
+    font-weight:700;
+    display:block;
+  }
+
+  footer .searchform input[type=text] {
+    border-radius: $border-radius;
+    border: 1px solid #CCC;
+    min-height:30px;
+    margin:0 0 10px 0;
+  }
+
+  footer .searchform input[type=submit] {
+    font-size: $paragraph-font-size ;
+    border-radius: $border-radius;
+    background-color: $theme-primary-color;
+    border:0;
+    color:#FFF;
+    padding:6px 10px 6px 10px;
+  }
+
+    footer .searchform input[type=submit]:hover {
+      background-color: darken($theme-primary-color, 15%);
+    }
+
+
+  /*
   footer ul.social  {
     margin:0;
     padding:0;
@@ -155,3 +232,4 @@ footer {
   footer .twitter .background {
     background-color: #2ea3de;
   }
+  */
