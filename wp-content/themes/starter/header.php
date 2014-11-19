@@ -32,7 +32,19 @@
 
 			<!-- MENU -->
 			<div class="columns large-9">
-				<p>Menu</p>
+				<nav class="show-for-large-only">
+					<?php
+
+					$args = array(
+						'theme_location'  => 'menu_principal',
+						'container'       => '',
+						'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>'
+					);
+
+					wp_nav_menu( $args );
+
+					?>
+				</nav>
 			</div>
 
 		</header>

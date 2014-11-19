@@ -90,6 +90,29 @@ body.opened {
   .nav-mobile {
     display: block; } }
 /* --------------------------- */
+/* 3. Navigation               */
+/* --------------------------- */
+nav ul {
+  margin: 10px 0 0 0;
+  padding: 0;
+  list-style-type: none; }
+
+nav ul li {
+  display: inline-block;
+  padding: 0 10px 0 10px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1); }
+
+nav ul li:last-child {
+  border-right: none; }
+
+nav ul li a {
+  color: #7CCC6D; }
+
+nav ul li.current-menu-item a {
+  color: #000;
+  text-decoration: none; }
+
+/* --------------------------- */
 /* 4. Breadcrumb               */
 /* --------------------------- */
 #breadcrumbs {
@@ -105,6 +128,10 @@ body.opened {
 
 #breadcrumbs li a {
   color: #7CCC6D; }
+
+#breadcrumbs li a:hover {
+  color: #4faf3d;
+  text-decoration: none; }
 
 /* --------------------------- */
 /* 15. Footer                  */

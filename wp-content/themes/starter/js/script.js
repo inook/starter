@@ -1,7 +1,6 @@
 $( document ).ready(function() {
 
 
-  console.log('ready');
 
 
   // Menu mobile
@@ -15,5 +14,6 @@ $( document ).ready(function() {
     }
 
   });
+  // End Menu mobile
 
 });
