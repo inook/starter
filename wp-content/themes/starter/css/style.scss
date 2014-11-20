@@ -297,6 +297,10 @@
 /* --------------------------- */
 
 
+p {
+  font-size: $paragraph-font-size;
+  line-height : $paragraph-line-height;
+}
 h1.color, h2.color, h3.color, h4.color, h5.color, h6.color, p.color {
   color:$theme-primary-color;
 }
@@ -310,7 +314,24 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,p a:hover {
   text-decoration:none;
 }
 
+// File icon
 
+a[href*=".pdf"], a[href*=".doc"], a[href*=".zip"] {
+  display:inline-block;
+  background: url('../img/document/file_download.svg') no-repeat $theme-primary-color;
+  background-position:6px 8px;
+  padding:10px 15px 10px 40px;
+  margin:0px 5px 5px 0px;
+  color:#FFF;
+  border-radius:2px;
+  text-decoration:none;
+  @include transition(background 200ms ease-in-out);
+}
+
+a[href*=".pdf"]:hover, a[href*=".doc"]:hover, a[href*=".zip"]:hover {
+  color:#FFF;
+  background-color: darken($theme-primary-color, 15%);
+}
 
 /* --------------------------- */
 /* 4. Breadcrumb               */
@@ -395,6 +416,7 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,p a:hover {
   }
 
   .widget .searchform input[type=text] {
+    display:block;
     border-radius: $border-radius;
     border: 1px solid #CCC;
     min-height:32px;
@@ -403,12 +425,14 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,p a:hover {
     }
 
     .widget .searchform input[type=submit] {
+      display:block;
       font-size: $paragraph-font-size ;
       border-radius: $border-radius;
       background-color: $theme-primary-color;
       border:0;
       color:#FFF;
       padding:9px 10px 8px 10px;
+      @include transition(background 200ms ease-in-out);
     }
 
     .widget .searchform input[type=submit]:hover {
@@ -430,6 +454,7 @@ h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,p a:hover {
       background-color: $theme-primary-color;
       padding: 6px;
       border-radius:$border-radius;
+      @include transition(background 200ms ease-in-out);
     }
 
     .widget-social a:hover{

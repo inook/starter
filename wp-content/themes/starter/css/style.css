@@ -129,10 +129,10 @@ header {
   transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .nav-button:hover .line {
-  background: #09c1b4; }
+  background: #e64827; }
 
 .nav-button:hover .nav-title {
-  color: #09c1b4; }
+  color: #e64827; }
 
 /* --------------------------- */
 /* 3. Navigation               */
@@ -191,10 +191,10 @@ header {
   transition: color 100ms ease-in-out; }
 
 .main-nav ul.menu li a:hover {
-  color: #09c1b4; }
+  color: #e64827; }
 
 .main-nav ul.menu li.current-menu-item a {
-  color: #09c1b4;
+  color: #e64827;
   text-decoration: none; }
 
 .main-nav ul.sub-menu {
@@ -227,7 +227,7 @@ header {
   border: 4px solid #eaeaea; }
 
 .nav-close:hover .line {
-  background: #09c1b4; }
+  background: #e64827; }
 
 .nav-close .line {
   display: block;
@@ -274,20 +274,43 @@ header {
   color: #000; }
 
 .nav-prev a:hover, .nav-next a:hover {
-  color: #09c1b4; }
+  color: #e64827; }
 
 /* --------------------------- */
 /* 1. Typographie              */
 /* --------------------------- */
+p {
+  font-size: 0.8125rem;
+  line-height: 1.5; }
+
 h1.color, h2.color, h3.color, h4.color, h5.color, h6.color, p.color {
-  color: #09c1b4; }
+  color: #e64827; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a {
-  color: #09c1b4; }
+  color: #e64827; }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, p a:hover {
-  color: #067870;
+  color: #ad2e14;
   text-decoration: none; }
+
+a[href*=".pdf"], a[href*=".doc"], a[href*=".zip"] {
+  display: inline-block;
+  background: url("../img/document/file_download.svg") no-repeat #e64827;
+  background-position: 6px 8px;
+  padding: 10px 15px 10px 40px;
+  margin: 0px 5px 5px 0px;
+  color: #FFF;
+  border-radius: 2px;
+  text-decoration: none;
+  -webkit-transition: background 200ms ease-in-out;
+  -moz-transition: background 200ms ease-in-out;
+  -ms-transition: background 200ms ease-in-out;
+  -o-transition: background 200ms ease-in-out;
+  transition: background 200ms ease-in-out; }
+
+a[href*=".pdf"]:hover, a[href*=".doc"]:hover, a[href*=".zip"]:hover {
+  color: #FFF;
+  background-color: #ad2e14; }
 
 /* --------------------------- */
 /* 4. Breadcrumb               */
@@ -304,10 +327,10 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, p a:hove
   padding: 0 5px 0 0; }
 
 #breadcrumbs li a {
-  color: #09c1b4; }
+  color: #e64827; }
 
 #breadcrumbs li a:hover {
-  color: #067870;
+  color: #ad2e14;
   text-decoration: none; }
 
 /* --------------------------- */
@@ -333,11 +356,11 @@ footer {
 .widget a {
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: #09c1b4; }
+  color: #e64827; }
 
 .widget a:hover {
   text-decoration: none;
-  color: #067870; }
+  color: #ad2e14; }
 
 .widget ul {
   list-style-type: none;
@@ -356,6 +379,7 @@ footer {
   display: block; }
 
 .widget .searchform input[type=text] {
+  display: block;
   border-radius: 3px;
   border: 1px solid #CCC;
   min-height: 32px;
@@ -363,15 +387,21 @@ footer {
   padding: 0 10px 0 10px; }
 
 .widget .searchform input[type=submit] {
+  display: block;
   font-size: 0.8125rem;
   border-radius: 3px;
-  background-color: #09c1b4;
+  background-color: #e64827;
   border: 0;
   color: #FFF;
-  padding: 9px 10px 8px 10px; }
+  padding: 9px 10px 8px 10px;
+  -webkit-transition: background 200ms ease-in-out;
+  -moz-transition: background 200ms ease-in-out;
+  -ms-transition: background 200ms ease-in-out;
+  -o-transition: background 200ms ease-in-out;
+  transition: background 200ms ease-in-out; }
 
 .widget .searchform input[type=submit]:hover {
-  background-color: #067870; }
+  background-color: #ad2e14; }
 
 .widget-social {
   display: inline-block;
@@ -382,12 +412,17 @@ footer {
   font-size: 1.125rem;
   text-decoration: none;
   color: #FFF;
-  background-color: #09c1b4;
+  background-color: #e64827;
   padding: 6px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  -webkit-transition: background 200ms ease-in-out;
+  -moz-transition: background 200ms ease-in-out;
+  -ms-transition: background 200ms ease-in-out;
+  -o-transition: background 200ms ease-in-out;
+  transition: background 200ms ease-in-out; }
 
 .widget-social a:hover {
   color: #FFF;
-  background-color: #067870; }
+  background-color: #ad2e14; }
 
 /*# sourceMappingURL=style.css.map */
