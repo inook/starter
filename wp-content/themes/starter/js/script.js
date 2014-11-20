@@ -5,12 +5,29 @@ $( document ).ready(function() {
 
   // Menu mobile
   // ----------------------
-  $( ".nav-mobile-bt" ).click(function() {
+  $( ".nav-button, .hide-content, .nav-close" ).click(function() {
 
-    if( $('.nav-mobile').hasClass('opened') ) {
-      $('body, .site-container, .nav-mobile').removeClass('opened');
+    if( $('body').hasClass('opened') ) {
+
+      $('.site-container').removeClass('opened');
+      $('nav').removeClass('opened');
+      $('.hide-content').removeClass('opened');
+
+      // Firefox hack
+      setTimeout(function() {
+        $('body').removeClass('opened');
+      },50);
+
     } else {
-      $('body, .site-container, .nav-mobile').addClass('opened');
+
+      $('.site-container').addClass('opened');
+      $('nav').addClass('opened');
+      $('.hide-content').addClass('opened');
+
+      // Firefox hack
+      setTimeout(function() {
+        $('body').addClass('opened');
+      },50);
     }
 
   });

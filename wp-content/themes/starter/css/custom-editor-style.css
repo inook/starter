@@ -1,0 +1,13 @@
+body#tinymce.wp-editor {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px;
+}
+
+
+body#tinymce.wp-editor h1.color { color:#7CCC6D; }
+body#tinymce.wp-editor h2.color { color:#7CCC6D; }
+body#tinymce.wp-editor h3.color { color:#7CCC6D; }
+body#tinymce.wp-editor h4.color { color:#7CCC6D; }
+body#tinymce.wp-editor h5.color { color:#7CCC6D; }
+body#tinymce.wp-editor h6.color { color:#7CCC6D; }
+body#tinymce.wp-editor p.color { color:#7CCC6D; }

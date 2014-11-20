@@ -1,7 +1,5 @@
 <?php get_header() ?>
 
-
-
 <!-- Content -->
 <div class="row">
 
@@ -10,7 +8,7 @@
   </div>
 
   <div class="columns large-12">
-    <p>content</p>
+    <h1>index.php</h1>
   </div>
 </div>
 

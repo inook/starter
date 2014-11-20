@@ -1,6 +1,9 @@
 <?php
 
 
+// Do shortcode un widget
+add_filter('widget_text', 'do_shortcode');
+
 // thumbnails
 // -------------------------------------------------
 
@@ -36,10 +39,14 @@ remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
  }
 
 
-// Widget & sidebar
+// Widget & sidebar & shortcode & Tiny MCE
 // -------------------------------------------------
 
  include 'inc/widget_footer.php';
+ include 'inc/widget_menu.php';
+ include 'inc/shortcode.php';
+ include 'inc/shortcode_social.php';
+ include 'inc/tiny_mce.php';
 
 
 // Remove comments page
@@ -109,6 +116,25 @@ function the_breadcrumb() {
                 echo '<li><strong> '.get_the_title().'</strong></li>';
             }
         }
+
+        // Page recherche
+        if( is_search() ) {
+          echo '<li><strong> Recherche </strong></li>';
+        }
 }
+
+// HIGHLIGHT SEARCH RESULT
+// -------------------------------------------------
+
+function wps_highlight_results($text){
+  if(is_search()){
+    $sr = get_query_var('s');
+    $keys = explode(" ",$sr);
+    $text = preg_replace('/('.implode('|', $keys) .')/iu', '<strong class="search-excerpt">'.$sr.'</strong>', $text);
+  }
+  return $text;
+}
+add_filter('the_excerpt', 'wps_highlight_results');
+add_filter('the_title', 'wps_highlight_results');
 
 ?>

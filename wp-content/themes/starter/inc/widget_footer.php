@@ -26,8 +26,8 @@ $args = array(
 	'id'            => 'footer-1',
 	'description'   => '',
   'class'         => '',
-	'before_widget' => '',
-	'after_widget'  => '',
+	'before_widget' => '<div class="widget">',
+	'after_widget'  => '</div>',
 	'before_title'  => '<h1>',
 	'after_title'   => '</h1>'
 
@@ -44,8 +44,8 @@ $args = array(
   'id'            => 'footer-2',
   'description'   => '',
   'class'         => '',
-  'before_widget' => '',
-  'after_widget'  => '',
+	'before_widget' => '<div class="widget">',
+	'after_widget'  => '</div>',
   'before_title'  => '<h1>',
   'after_title'   => '</h1>'
 
@@ -63,8 +63,8 @@ $args = array(
   'id'            => 'footer-3',
   'description'   => '',
   'class'         => '',
-  'before_widget' => '',
-  'after_widget'  => '',
+	'before_widget' => '<div class="widget">',
+	'after_widget'  => '</div>',
   'before_title'  => '<h1>',
   'after_title'   => '</h1>'
 
@@ -81,8 +81,8 @@ $args = array(
   'id'            => 'footer-4',
   'description'   => '',
   'class'         => '',
-  'before_widget' => '',
-  'after_widget'  => '',
+	'before_widget' => '<div class="widget">',
+	'after_widget'  => '</div>',
   'before_title'  => '<h1>',
   'after_title'   => '</h1>'
 
