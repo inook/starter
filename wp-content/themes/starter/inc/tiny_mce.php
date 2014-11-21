@@ -28,6 +28,15 @@ function my_mce_before_init_insert_formats( $init_array ) {
 
     ),
     array(
+      'title' => 'Blanc',
+      'selector' => 'h1, h2, h3, h4, h5, h6, p',
+      'classes' => 'blanc',
+      'wrapper' => false,
+
+    ),
+
+    /*
+    array(
       'title' => 'Titre 1',
       'block' => 'h1',
       'wrapper' => false,
@@ -39,6 +48,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
       'classes' => 'sub-title',
       'wrapper' => true,
     )
+    */
 
   );
 

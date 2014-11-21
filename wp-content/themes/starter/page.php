@@ -1,24 +1,26 @@
 <?php get_header() ?>
 
 <!-- Content -->
-<article class="row">
 
-  <div class="columns large-12">
-    <?php the_breadcrumb(); ?>
-  </div>
+<article>
 
-  <div class="columns large-12">
+  <div class="row">
 
+    <div class="columns large-12">
+      <?php the_breadcrumb(); ?>
+    </div>
 
-    <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
+    <div class="columns large-12">
 
-      <h1><?php the_title(); ?></h1>
+      <?php if ( have_posts() ) { while ( have_posts() ) { the_post(); ?>
 
-      <?php the_content() ?>
+        <h1><?php the_title(); ?></h1>
 
-    <?php } } ?>
+        <?php the_content() ?>
 
+      <?php } } ?>
 
+    </div>
 
   </div>
 

@@ -81,9 +81,11 @@ body.opened {
 /* 1. Header                   */
 /* --------------------------- */
 header {
+  width: 100%;
   padding: 20px;
   margin-bottom: 20px;
-  border-bottom: 1px solid #eaeaea; }
+  border-bottom: 1px solid #eaeaea;
+  background-color: #fff; }
 
 .logo {
   float: left;
@@ -129,10 +131,10 @@ header {
   transition: all 200ms cubic-bezier(0.645, 0.045, 0.355, 1); }
 
 .nav-button:hover .line {
-  background: #e64827; }
+  background: #8b80dd; }
 
 .nav-button:hover .nav-title {
-  color: #e64827; }
+  color: #8b80dd; }
 
 /* --------------------------- */
 /* 3. Navigation               */
@@ -176,25 +178,20 @@ header {
   font-weight: 700; }
 
 .main-nav ul.menu li {
-  font-size: 14px;
-  font-size: 0.875rem;
   padding: 5px 0; }
 
 .main-nav ul.menu li a {
-  font-size: 18px;
+  font-size: 15px;
   color: #3D3D3D;
   text-decoration: none;
-  -webkit-transition: color 100ms ease-in-out;
-  -moz-transition: color 100ms ease-in-out;
-  -ms-transition: color 100ms ease-in-out;
-  -o-transition: color 100ms ease-in-out;
-  transition: color 100ms ease-in-out; }
-
-.main-nav ul.menu li a:hover {
-  color: #e64827; }
+  -webkit-transition: all 100ms ease-in-out;
+  -moz-transition: all 100ms ease-in-out;
+  -ms-transition: all 100ms ease-in-out;
+  -o-transition: all 100ms ease-in-out;
+  transition: all 100ms ease-in-out; }
 
 .main-nav ul.menu li.current-menu-item a {
-  color: #e64827;
+  color: #8b80dd;
   text-decoration: none; }
 
 .main-nav ul.sub-menu {
@@ -204,7 +201,7 @@ header {
   list-style-type: none; }
 
 .main-nav ul.sub-menu li a {
-  font-size: 15px; }
+  font-size: 13px; }
 
 .main-nav ul.sub-menu li a::before {
   content: "— "; }
@@ -227,7 +224,7 @@ header {
   border: 4px solid #eaeaea; }
 
 .nav-close:hover .line {
-  background: #e64827; }
+  background: #8b80dd; }
 
 .nav-close .line {
   display: block;
@@ -274,7 +271,7 @@ header {
   color: #000; }
 
 .nav-prev a:hover, .nav-next a:hover {
-  color: #e64827; }
+  color: #8b80dd; }
 
 /* --------------------------- */
 /* 1. Typographie              */
@@ -284,18 +281,21 @@ p {
   line-height: 1.5; }
 
 h1.color, h2.color, h3.color, h4.color, h5.color, h6.color, p.color {
-  color: #e64827; }
+  color: #8b80dd; }
+
+h1.blanc, h2.blanc, h3.blanc, h4.blanc, h5.blanc, h6.blanc, p.blanc {
+  color: #FFF; }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a, p a {
-  color: #e64827; }
+  color: #8b80dd; }
 
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, p a:hover {
-  color: #ad2e14;
+  color: #5444cd;
   text-decoration: none; }
 
 a[href*=".pdf"], a[href*=".doc"], a[href*=".zip"] {
   display: inline-block;
-  background: url("../img/document/file_download.svg") no-repeat #e64827;
+  background: url("../img/document/file_download.svg") no-repeat #8b80dd;
   background-position: 6px 8px;
   padding: 10px 15px 10px 40px;
   margin: 0px 5px 5px 0px;
@@ -310,27 +310,51 @@ a[href*=".pdf"], a[href*=".doc"], a[href*=".zip"] {
 
 a[href*=".pdf"]:hover, a[href*=".doc"]:hover, a[href*=".zip"]:hover {
   color: #FFF;
-  background-color: #ad2e14; }
+  background-color: #5444cd; }
+
+/* --------------------------- */
+/* 1. Mise en page             */
+/* --------------------------- */
+.fullscreen {
+  width: 100%;
+  padding: 70px 0 70px 0;
+  margin: 40px 0 40px 0; }
+
+.fullscreen-texte {
+  background-color: #c2bced; }
+
+.fullscreen-image {
+  min-height: 300px;
+  background: no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
 /* --------------------------- */
 /* 4. Breadcrumb               */
 /* --------------------------- */
-#breadcrumbs {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
+#breadcrumbs .delimiter {
+  color: #CCC;
+  display: inline-block;
+  font-size: 12px;
+  font-size: 0.75rem; }
 
-#breadcrumbs li {
+#breadcrumbs a {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  display: inline-block;
+  padding: 0 5px 0 0;
+  color: #8b80dd; }
+
+#breadcrumbs .current {
   font-size: 11px;
   font-size: 0.6875rem;
   display: inline-block;
   padding: 0 5px 0 0; }
 
-#breadcrumbs li a {
-  color: #e64827; }
-
-#breadcrumbs li a:hover {
-  color: #ad2e14;
+#breadcrumbs a:hover {
+  color: #5444cd;
   text-decoration: none; }
 
 /* --------------------------- */
@@ -356,11 +380,11 @@ footer {
 .widget a {
   font-size: 0.8125rem;
   line-height: 1.5;
-  color: #e64827; }
+  color: #8b80dd; }
 
 .widget a:hover {
   text-decoration: none;
-  color: #ad2e14; }
+  color: #5444cd; }
 
 .widget ul {
   list-style-type: none;
@@ -390,7 +414,7 @@ footer {
   display: block;
   font-size: 0.8125rem;
   border-radius: 3px;
-  background-color: #e64827;
+  background-color: #8b80dd;
   border: 0;
   color: #FFF;
   padding: 9px 10px 8px 10px;
@@ -401,7 +425,7 @@ footer {
   transition: background 200ms ease-in-out; }
 
 .widget .searchform input[type=submit]:hover {
-  background-color: #ad2e14; }
+  background-color: #5444cd; }
 
 .widget-social {
   display: inline-block;
@@ -412,7 +436,7 @@ footer {
   font-size: 1.125rem;
   text-decoration: none;
   color: #FFF;
-  background-color: #e64827;
+  background-color: #8b80dd;
   padding: 6px;
   border-radius: 3px;
   -webkit-transition: background 200ms ease-in-out;
@@ -423,6 +447,6 @@ footer {
 
 .widget-social a:hover {
   color: #FFF;
-  background-color: #ad2e14; }
+  background-color: #5444cd; }
 
 /*# sourceMappingURL=style.css.map */

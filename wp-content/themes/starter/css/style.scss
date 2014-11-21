@@ -36,10 +36,9 @@
    // Style
    $border-radius: 3px;
 
-   // Navigation Mobile
-   $nav-mobile-size : 400px;
-   $nav-mobile-bg : #FFF;
-
+   // Navigation
+   $nav-size : 400px;
+   $nav-bg : #FFF;
 
 
 /* --------------------------- */
@@ -57,6 +56,7 @@
       font-weight: normal;
       font-style: normal;
   }
+
 
 /* --------------------------- */
 /* 1. Structure                */
@@ -106,9 +106,11 @@
 /* --------------------------- */
 
   header {
+    width:100%;
     padding:20px;
     margin-bottom:20px;
     border-bottom:1px solid #eaeaea;
+    background-color: #fff;
   }
 
   .logo {
@@ -120,7 +122,6 @@
     cursor:pointer;
     float:right;
     height:30px;
-
   }
 
   .nav-icon {
@@ -172,10 +173,10 @@
     top:0px;
     right: 0px;
     height:100%;
-    width:$nav-mobile-size;
-    background:$nav-mobile-bg;
+    width:$nav-size;
+    background:$nav-bg;
     z-index:2;
-    @include translate( $nav-mobile-size, 0px);
+    @include translate( $nav-size, 0px);
     @include transition(transform 400ms cubic-bezier(0.645, 0.045, 0.355, 1.000) );
   }
 
@@ -198,19 +199,14 @@
     }
 
     .main-nav ul.menu li {
-      @include font-size(14px);
       padding:5px 0;
     }
 
     .main-nav ul.menu li a {
-      font-size:18px;
+      font-size:15px;
       color:#3D3D3D;
       text-decoration:none;
-      @include transition(color 100ms ease-in-out );
-    }
-
-    .main-nav ul.menu li a:hover {
-      color:$theme-primary-color;
+      @include transition(all 100ms ease-in-out );
     }
 
     .main-nav ul.menu li.current-menu-item a {
@@ -226,13 +222,12 @@
     }
 
     .main-nav ul.sub-menu li a{
-      font-size:15px;
+      font-size:13px;
     }
 
     .main-nav ul.sub-menu li a::before {
       content: "— ";
     }
-
 
     .nav-close {
       width:50px;
@@ -290,8 +285,6 @@
       }
 
 
-
-
 /* --------------------------- */
 /* 1. Typographie              */
 /* --------------------------- */
@@ -301,8 +294,13 @@ p {
   font-size: $paragraph-font-size;
   line-height : $paragraph-line-height;
 }
+
 h1.color, h2.color, h3.color, h4.color, h5.color, h6.color, p.color {
   color:$theme-primary-color;
+}
+
+h1.blanc, h2.blanc, h3.blanc, h4.blanc, h5.blanc, h6.blanc, p.blanc {
+  color:#FFF;
 }
 
 h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,p a {
@@ -333,26 +331,54 @@ a[href*=".pdf"]:hover, a[href*=".doc"]:hover, a[href*=".zip"]:hover {
   background-color: darken($theme-primary-color, 15%);
 }
 
+
+/* --------------------------- */
+/* 1. Mise en page             */
+/* --------------------------- */
+
+.fullscreen {
+  width:100%;
+  padding:70px 0 70px 0;
+  margin:40px 0 40px 0;
+}
+
+  .fullscreen-texte {
+    background-color: lighten($theme-primary-color, 15%);
+  }
+
+  .fullscreen-image {
+    min-height:300px;
+    background: no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
 /* --------------------------- */
 /* 4. Breadcrumb               */
 /* --------------------------- */
 
-  #breadcrumbs {
-    margin:0;
-    padding:0;
-    list-style-type:none;
+  #breadcrumbs .delimiter{
+    color:#CCC;
+    display: inline-block;
+    @include font-size(12px);
   }
-    #breadcrumbs li{
+
+    #breadcrumbs a{
+      @include font-size(11px);
+      display: inline-block;
+      padding:0 5px 0 0;
+      color: $theme-primary-color;
+    }
+
+    #breadcrumbs .current {
       @include font-size(11px);
       display: inline-block;
       padding:0 5px 0 0;
     }
 
-    #breadcrumbs li a {
-      color: $theme-primary-color;
-    }
-
-    #breadcrumbs li a:hover {
+    #breadcrumbs a:hover {
       color: darken($theme-primary-color, 15%);
       text-decoration:none;
     }

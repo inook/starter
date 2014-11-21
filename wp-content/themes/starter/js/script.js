@@ -1,8 +1,6 @@
 $( document ).ready(function() {
 
 
-
-
   // Menu mobile
   // ----------------------
   $( ".nav-button, .hide-content, .nav-close" ).click(function() {
